@@ -34,7 +34,10 @@ auto-advisor/
 │   ├── product-management/
 │   ├── innovation-management/
 │   ├── advanced-strategy/
-│   └── entrepreneurship/
+│   ├── entrepreneurship/
+│   ├── exploring-opportunity/
+│   ├── business-in-society/
+│   └── silicon-valley-insights/
 ├── knowledge/
 ├── .claude/agents/
 ├── ideas/
@@ -194,6 +197,9 @@ When given a business idea, I ALWAYS:
 - `03-innovation-management-advisor.md`
 - `04-advanced-strategy-advisor.md`
 - `05-entrepreneurship-advisor.md`
+- `06-exploring-opportunity-advisor.md`
+- `07-business-society-advisor.md`
+- `08-silicon-valley-advisor.md`
 
 ### Step 4 — Create the Orchestrator
 
@@ -345,12 +351,18 @@ When Phase 1 completes successfully, the repository should contain:
 - `knowledge/innovation-management.md`
 - `knowledge/advanced-strategy.md`
 - `knowledge/entrepreneurship.md`
+- `knowledge/exploring-opportunity.md`
+- `knowledge/business-in-society.md`
+- `knowledge/silicon-valley-insights.md`
 - `.claude/agents/00-orchestrator.md`
 - `.claude/agents/01-design-thinking-advisor.md`
 - `.claude/agents/02-product-management-advisor.md`
 - `.claude/agents/03-innovation-management-advisor.md`
 - `.claude/agents/04-advanced-strategy-advisor.md`
 - `.claude/agents/05-entrepreneurship-advisor.md`
+- `.claude/agents/06-exploring-opportunity-advisor.md`
+- `.claude/agents/07-business-society-advisor.md`
+- `.claude/agents/08-silicon-valley-advisor.md`
 - `.claude/agents/99-critic.md`
 
 If a course is missing or empty, log it clearly and continue with the courses that do exist.
@@ -363,11 +375,14 @@ Use this phase when the user provides a business idea or asks for an evaluation.
 
 Always run the advisors in this order:
 
-1. Design Thinking Advisor
-2. Product Management Advisor
-3. Innovation Management Advisor
-4. Advanced Strategy Advisor
-5. Entrepreneurship Advisor
+1. Design Thinking Advisor (Lena Voss)
+2. Product Management Advisor (Adrian Vale)
+3. Innovation Management Advisor (Helena Mora)
+4. Advanced Strategy Advisor (Victor Hale)
+5. Entrepreneurship Advisor (Maya Chen)
+6. Exploring Opportunity Advisor (Nico Ferran)
+7. Business in Society Advisor (Nadia Soler)
+8. Silicon Valley Advisor (Cole Mercer)
 
 This is a waterfall. Each advisor sees everything before them from the current round.
 
@@ -403,7 +418,10 @@ output/run-[timestamp]/
 │   │   ├── product-mgmt.md
 │   │   ├── innovation.md
 │   │   ├── strategy.md
-│   │   └── entrepreneurship.md
+│   │   ├── entrepreneurship.md
+│   │   ├── exploring-opportunity.md
+│   │   ├── business-society.md
+│   │   └── silicon-valley.md
 │   ├── round-2/
 │   └── ...
 ├── scores/history.json
@@ -434,6 +452,9 @@ Date: [timestamp] | Rounds: [N] | Final Score: [X/100]
 | Innovation | 🟢/🟡/🔴 | ... | ... |
 | Strategy | 🟢/🟡/🔴 | ... | ... |
 | Entrepreneurship | 🟢/🟡/🔴 | ... | ... |
+| Exploring Opportunity | 🟢/🟡/🔴 | ... | ... |
+| Business in Society | 🟢/🟡/🔴 | ... | ... |
+| Silicon Valley | 🟢/🟡/🔴 | ... | ... |
 
 ## Detailed Analysis by Advisor
 [Full outputs in sequence]

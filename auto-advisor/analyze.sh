@@ -9,6 +9,9 @@ RUN_LOOP="$PROJECT_ROOT/run-loop.sh"
 EXTRACT_SCRIPT="$PROJECT_ROOT/extract_standalone.py"
 OUTPUT_DIR="$PROJECT_ROOT/output"
 
+# Model config
+OPENCODE_MODEL="${OPENCODE_MODEL:-opencode/minimax-m2.5-free}"
+
 usage() {
   cat <<'EOF'
 Usage:
@@ -49,24 +52,16 @@ require_extracted_assets() {
 run_claude_prompt_to_file() {
   local prompt="$1"
   local output_file="$2"
-  local temp_file
-  temp_file="$(mktemp)"
-  if ! (
-    cd "$PROJECT_ROOT"
-    claude -p \
-      --dangerously-skip-permissions \
-      --permission-mode bypassPermissions \
-      "$prompt"
-  ) >"$temp_file"; then
-    rm -f "$temp_file"
-    echo "Claude invocation failed." >&2
+  if ! opencode run \
+    -m "$OPENCODE_MODEL" \
+    -- "$prompt" \
+    > "$output_file" 2>/dev/null; then
+    echo "OpenCode run failed." >&2
     exit 1
   fi
-  mv "$temp_file" "$output_file"
 }
 
 run_extract_with_claude() {
-  require_command claude
   local prompt
   prompt="$(cat <<EOF
 You are operating inside the auto-advisor project.
@@ -77,13 +72,7 @@ If a course folder is empty, report it in your response but continue.
 Use the repository directly and finish with a concise summary of what was generated.
 EOF
 )"
-  (
-    cd "$PROJECT_ROOT"
-    claude -p \
-      --dangerously-skip-permissions \
-      --permission-mode bypassPermissions \
-      "$prompt"
-  )
+  opencode run -m "$OPENCODE_MODEL" -- "$prompt"
 }
 
 run_extract_cheap() {

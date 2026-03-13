@@ -15,6 +15,10 @@ BUDGET_USD=5.00
 CONVERGENCE_THRESHOLD=2
 MIN_SCORE=85
 
+# Model config — uses OpenCode with free MiniMax M2.5 by default
+# Override with OPENCODE_MODEL env var if desired
+OPENCODE_MODEL="${OPENCODE_MODEL:-opencode/minimax-m2.5-free}"
+
 IDEA_INPUT=""
 IDEA_TEXT=""
 IDEA_NAME="idea"
@@ -60,11 +64,17 @@ require_assets() {
     "$AGENTS_DIR/03-innovation-management-advisor.md"
     "$AGENTS_DIR/04-advanced-strategy-advisor.md"
     "$AGENTS_DIR/05-entrepreneurship-advisor.md"
+    "$AGENTS_DIR/06-exploring-opportunity-advisor.md"
+    "$AGENTS_DIR/07-business-society-advisor.md"
+    "$AGENTS_DIR/08-silicon-valley-advisor.md"
     "$KNOWLEDGE_DIR/design-thinking.md"
     "$KNOWLEDGE_DIR/product-management.md"
     "$KNOWLEDGE_DIR/innovation-management.md"
     "$KNOWLEDGE_DIR/advanced-strategy.md"
     "$KNOWLEDGE_DIR/entrepreneurship.md"
+    "$KNOWLEDGE_DIR/exploring-opportunity.md"
+    "$KNOWLEDGE_DIR/business-in-society.md"
+    "$KNOWLEDGE_DIR/silicon-valley-insights.md"
   )
   local missing=0
   for item in "${required[@]}"; do
@@ -360,14 +370,11 @@ make_run_dirs() {
 claude_prompt_file() {
   local prompt_file="$1"
   local output_file="$2"
-  if ! (
-    cd "$PROJECT_ROOT"
-    claude -p \
-      --dangerously-skip-permissions \
-      --permission-mode bypassPermissions \
-      --max-budget-usd "$BUDGET_USD" \
-      "$( <"$prompt_file" )"
-  ) >"$output_file"; then
+  if ! opencode run \
+    -m "$OPENCODE_MODEL" \
+    -- "$(< "$prompt_file")" \
+    > "$output_file" 2>/dev/null; then
+    echo "OpenCode run failed" >&2
     return 1
   fi
 }
@@ -474,6 +481,12 @@ $(<"$round_dir/strategy.md")
 
 $(<"$round_dir/entrepreneurship.md")
 
+$(<"$round_dir/exploring-opportunity.md")
+
+$(<"$round_dir/business-society.md")
+
+$(<"$round_dir/silicon-valley.md")
+
 Return valid JSON only using the required schema from CLAUDE.md.
 EOF
 
@@ -557,6 +570,12 @@ $(<"$round_dir/strategy.md")
 
 $(<"$round_dir/entrepreneurship.md")
 
+$(<"$round_dir/exploring-opportunity.md")
+
+$(<"$round_dir/business-society.md")
+
+$(<"$round_dir/silicon-valley.md")
+
 Return markdown only. Follow the final report template from CLAUDE.md.
 EOF
 
@@ -579,6 +598,12 @@ $(<"$round_dir/innovation.md")
 $(<"$round_dir/strategy.md")
 
 $(<"$round_dir/entrepreneurship.md")
+
+$(<"$round_dir/exploring-opportunity.md")
+
+$(<"$round_dir/business-society.md")
+
+$(<"$round_dir/silicon-valley.md")
 EOF
     append_activity "warning" "Round $CURRENT_ROUND: orchestrator fallback report used"
   else
@@ -599,8 +624,8 @@ commit_round() {
 
 main() {
   parse_args "$@"
-  require_command claude
   require_command python3
+  require_command opencode
   require_command git
   load_idea
   require_assets
@@ -657,6 +682,30 @@ main() {
       "$AGENTS_DIR/05-entrepreneurship-advisor.md" \
       "$KNOWLEDGE_DIR/entrepreneurship.md" \
       "$round_dir/entrepreneurship.md" \
+      "$accumulated_outputs" \
+      "$previous_summary"
+    accumulated_outputs="$accumulated_outputs"$'\n\n'"$(<"$round_dir/entrepreneurship.md")"
+
+    run_advisor "exploring-opportunity-advisor" "Exploring Opportunity Advisor" \
+      "$AGENTS_DIR/06-exploring-opportunity-advisor.md" \
+      "$KNOWLEDGE_DIR/exploring-opportunity.md" \
+      "$round_dir/exploring-opportunity.md" \
+      "$accumulated_outputs" \
+      "$previous_summary"
+    accumulated_outputs="$accumulated_outputs"$'\n\n'"$(<"$round_dir/exploring-opportunity.md")"
+
+    run_advisor "business-society-advisor" "Business in Society Advisor" \
+      "$AGENTS_DIR/07-business-society-advisor.md" \
+      "$KNOWLEDGE_DIR/business-in-society.md" \
+      "$round_dir/business-society.md" \
+      "$accumulated_outputs" \
+      "$previous_summary"
+    accumulated_outputs="$accumulated_outputs"$'\n\n'"$(<"$round_dir/business-society.md")"
+
+    run_advisor "silicon-valley-advisor" "Silicon Valley Advisor" \
+      "$AGENTS_DIR/08-silicon-valley-advisor.md" \
+      "$KNOWLEDGE_DIR/silicon-valley-insights.md" \
+      "$round_dir/silicon-valley.md" \
       "$accumulated_outputs" \
       "$previous_summary"
 
