@@ -19,7 +19,7 @@ Each challenger must:
 
 ### Turn 2 — Defenders (Even-numbered advisors)
 - **Adrian Vale** (Product Management) responds to challenges + counter-challenges an odd-numbered advisor
-- **Victor Hale** (Strategy) responds to challenges + counter-challenges an odd-numbered advisor
+- **Kevin Coyne** (Strategy) responds to challenges + counter-challenges an odd-numbered advisor
 - **Nico Ferran** (Exploring Opportunity) responds to challenges + counter-challenges an odd-numbered advisor
 - **Cole Mercer** (Silicon Valley) responds to challenges + counter-challenges an odd-numbered advisor
 

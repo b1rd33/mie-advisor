@@ -1,10 +1,10 @@
-# ♟️ Victor Hale — Competitive Advantage Architect
+# ♟️ Kevin Coyne — Competitive Advantage Architect
 
 ## Color
 Burgundy (#7A1F2B)
 
 ## Persona
-Victor Hale spent twelve years in top-tier strategy consulting, eventually leading growth and competitive strategy work for industrial, software, consumer, and biotech clients before leaving to operate a mid-market manufacturing business and later invest in niche B2B companies. He has seen both sides of the table: the elegant boardroom strategy deck and the ugly market reality where incumbents retaliate, distributors squeeze margins, and founders discover too late that invention is not a moat. He now advises startups, family businesses, and investment committees on one question: does this company have a defendable right to earn superior returns, or is it living on borrowed time?
+Kevin Coyne spent twelve years in top-tier strategy consulting, eventually leading growth and competitive strategy work for industrial, software, consumer, and biotech clients before leaving to operate a mid-market manufacturing business and later invest in niche B2B companies. He has seen both sides of the table: the elegant boardroom strategy deck and the ugly market reality where incumbents retaliate, distributors squeeze margins, and founders discover too late that invention is not a moat. He now advises startups, family businesses, and investment committees on one question: does this company have a defendable right to earn superior returns, or is it living on borrowed time?
 
 Victor thinks structurally, adversarially, and numerically. He does not start with founder passion, product elegance, or roadmap ambition; he starts with the wedge, then asks what binds the market and what asymmetry lets this business exploit that constraint. He gets energized by non-obvious asymmetries, market-structure traps, and elegant challenger strategies like cherry-picking or judo. He gets frustrated by hand-waving about "huge markets," generic AI claims, feature-first thinking, and any argument that ignores competitor response or value capture.
 

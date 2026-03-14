@@ -634,7 +634,7 @@ run_debate() {
 
   # Compress all advisor outputs for debate context
   local compressed=""
-  local advisor_labels=("Lena Voss (Design Thinking)" "Adrian Vale (Product Mgmt)" "Helena Mora (Innovation)" "Victor Hale (Strategy)" "Maya Chen (Entrepreneurship)" "Nico Ferran (Exploring Opp)" "Nadia Soler (Business & Society)" "Cole Mercer (Silicon Valley)")
+  local advisor_labels=("Lena Voss (Design Thinking)" "Adrian Vale (Product Mgmt)" "Helena Mora (Innovation)" "Kevin Coyne (Strategy)" "Maya Chen (Entrepreneurship)" "Nico Ferran (Exploring Opp)" "Nadia Soler (Business & Society)" "Cole Mercer (Silicon Valley)")
   local advisor_files=("design-thinking.md" "product-mgmt.md" "innovation.md" "strategy.md" "entrepreneurship.md" "exploring-opportunity.md" "business-society.md" "silicon-valley.md")
 
   for i in "${!advisor_files[@]}"; do
@@ -668,7 +668,7 @@ $previous_summary
 TURN 1 — CHALLENGERS
 The following advisors must each challenge the most questionable claim from an even-numbered advisor:
 
-1. **Lena Voss** (Design Thinking, advisor #1) — challenge Adrian Vale (#2) OR Victor Hale (#4) OR Nico Ferran (#6) OR Cole Mercer (#8)
+1. **Lena Voss** (Design Thinking, advisor #1) — challenge Adrian Vale (#2) OR Kevin Coyne (#4) OR Nico Ferran (#6) OR Cole Mercer (#8)
 2. **Helena Mora** (Innovation Management, advisor #3) — challenge a DIFFERENT even-numbered advisor
 3. **Maya Chen** (Entrepreneurship, advisor #5) — challenge a DIFFERENT even-numbered advisor
 4. **Nadia Soler** (Business & Society, advisor #7) — challenge a DIFFERENT even-numbered advisor
@@ -731,7 +731,7 @@ TURN 2 — DEFENDERS
 The even-numbered advisors respond to challenges AND counter-challenge odd-numbered advisors:
 
 1. **Adrian Vale** (Product Management, advisor #2) — respond to any challenge directed at him, then counter-challenge Lena (#1) OR Helena (#3) OR Maya (#5) OR Nadia (#7)
-2. **Victor Hale** (Strategy, advisor #4) — respond + counter-challenge a DIFFERENT odd-numbered advisor
+2. **Kevin Coyne** (Strategy, advisor #4) — respond + counter-challenge a DIFFERENT odd-numbered advisor
 3. **Nico Ferran** (Exploring Opportunity, advisor #6) — respond + counter-challenge a DIFFERENT odd-numbered advisor
 4. **Cole Mercer** (Silicon Valley, advisor #8) — respond + counter-challenge a DIFFERENT odd-numbered advisor
 
@@ -747,7 +747,7 @@ Format your output as:
 ### Adrian Vale responds & counter-challenges [advisor name]
 [response + counter text]
 
-### Victor Hale responds & counter-challenges [advisor name]
+### Kevin Coyne responds & counter-challenges [advisor name]
 [response + counter text]
 
 ### Nico Ferran responds & counter-challenges [advisor name]

@@ -25,7 +25,7 @@ Always run the advisors in this exact order:
 1. **Lena Voss** — Design Thinking Strategist (`01-design-thinking-advisor.md`)
 2. **Adrian Vale** — Product Management Advisor (`02-product-management-advisor.md`)
 3. **Helena Mora** — Innovation Management Architect (`03-innovation-management-advisor.md`)
-4. **Victor Hale** — Advanced Strategy Architect (`04-advanced-strategy-advisor.md`)
+4. **Kevin Coyne** — Advanced Strategy Architect (`04-advanced-strategy-advisor.md`)
 5. **Maya Chen** — Entrepreneurship Advisor (`05-entrepreneurship-advisor.md`)
 6. **Nico Ferran** — Opportunity Scout & GTM Operator (`06-exploring-opportunity-advisor.md`)
 7. **Nadia Soler** — Stakeholder Systems Advisor (`07-business-society-advisor.md`)

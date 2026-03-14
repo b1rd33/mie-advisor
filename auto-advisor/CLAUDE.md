@@ -378,7 +378,7 @@ Always run the advisors in this order:
 1. Design Thinking Advisor (Lena Voss)
 2. Product Management Advisor (Adrian Vale)
 3. Innovation Management Advisor (Helena Mora)
-4. Advanced Strategy Advisor (Victor Hale)
+4. Advanced Strategy Advisor (Kevin Coyne)
 5. Entrepreneurship Advisor (Maya Chen)
 6. Exploring Opportunity Advisor (Nico Ferran)
 7. Business in Society Advisor (Nadia Soler)
