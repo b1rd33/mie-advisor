@@ -6,7 +6,7 @@ user-invocable: true
 
 # MIE Business Advisor
 
-A skill package built from the Management of Innovation & Entrepreneurship (MIE) program at TU Wien. Uses 8 expert advisor personas grounded in real course frameworks.
+A skill package built from the Management of Innovation & Entrepreneurship (MIE) program at ESADE. Uses 8 expert advisor personas grounded in real course frameworks.
 
 ## Usage
 

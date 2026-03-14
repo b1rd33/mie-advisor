@@ -1,6 +1,6 @@
 # MIE Business Advisor
 
-A Claude Code skill package that gives you 8 expert business advisors trained on frameworks from TU Wien's Management of Innovation & Entrepreneurship (MIE) program.
+A Claude Code skill package that gives you 8 expert business advisors trained on frameworks from ESADE's Management of Innovation & Entrepreneurship (MIE) program.
 
 ## Quick Start
 
@@ -89,4 +89,4 @@ Planned additions:
 
 ## License
 
-MIT — built for MIE students at TU Wien. Use it, share it, improve it.
+MIT — built for MIE students at ESADE. Use it, share it, improve it.
