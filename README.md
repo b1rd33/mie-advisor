@@ -1,4 +1,4 @@
-# MIE Business Advisor
+# MIE Advisor
 
 8 AI business advisors that stress-test your startup ideas using real frameworks from ESADE's MIE program. Built as a skill for Claude Code, Codex, and similar AI coding tools.
 

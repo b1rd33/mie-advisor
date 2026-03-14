@@ -1,10 +1,10 @@
 ---
 name: mie-advisor
-description: "MIE Business Advisor — multi-perspective analysis, single-advisor deep dives, and assumption stress-testing"
+description: "MIE Advisor — multi-perspective analysis, single-advisor deep dives, and assumption stress-testing"
 user-invocable: true
 ---
 
-# MIE Business Advisor
+# MIE Advisor
 
 A skill package built from the Management of Innovation & Entrepreneurship (MIE) program at ESADE. Uses 8 expert advisor personas grounded in real course frameworks.
 
