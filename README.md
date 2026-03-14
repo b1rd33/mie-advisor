@@ -109,4 +109,4 @@ Planned:
 
 ## License
 
-MIT — built for MIE students at ESADE. Use it, share it, improve it.
+Licensed for ESADE MIE students and alumni only. See [LICENSE](LICENSE) for details.
