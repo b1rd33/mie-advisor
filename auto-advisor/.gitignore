@@ -1,9 +1,8 @@
-output/*
-!output/.gitkeep
-logs/*
-!logs/.gitkeep
+output/
 state.json
 *.pyc
 __pycache__/
 .DS_Store
 node_modules/
+.env
+.env.*
