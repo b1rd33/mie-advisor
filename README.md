@@ -5,7 +5,7 @@ A Claude Code skill package that gives you 8 expert business advisors trained on
 ## Quick Start
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/MIE-advisor.git
+git clone https://github.com/b1rd33/mie-advisor.git
 cd MIE-advisor
 ```
 
@@ -75,21 +75,6 @@ Planned additions:
 - Marketing & Customer Acquisition
 - Operations & Supply Chain
 - Legal & IP Strategy
-
-## Full Auto-Advisor Engine
-
-The `auto-advisor-v1` branch contains the full automated pipeline:
-- Shell script that runs all advisors via OpenCode/OpenRouter
-- Parallel tmux execution (8 advisors running simultaneously)
-- Live CLI dashboard (`watch.sh`)
-- Multi-round iterative refinement with scoring convergence
-- Web research via MCP (agent-browser, fetch)
-
-```bash
-git checkout auto-advisor-v1
-cd auto-advisor
-./run-loop.sh "your idea" --max-rounds 3
-```
 
 ## Requirements
 
