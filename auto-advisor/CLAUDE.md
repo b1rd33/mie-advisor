@@ -421,7 +421,10 @@ output/run-[timestamp]/
 │   │   ├── entrepreneurship.md
 │   │   ├── exploring-opportunity.md
 │   │   ├── business-society.md
-│   │   └── silicon-valley.md
+│   │   ├── silicon-valley.md
+│   │   ├── debate-turn-1.md
+│   │   ├── debate-turn-2.md
+│   │   └── debate-synthesis.md
 │   ├── round-2/
 │   └── ...
 ├── scores/history.json
