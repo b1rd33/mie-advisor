@@ -6,10 +6,16 @@ A Claude Code skill package that gives you 8 expert business advisors trained on
 
 ```bash
 git clone https://github.com/b1rd33/mie-advisor.git
-cd MIE-advisor
+cd mie-advisor
 ```
 
-Then in Claude Code:
+Open Claude Code in this directory:
+
+```bash
+claude
+```
+
+Then run:
 
 ```
 /mie-advisor analyze "An app that helps freelancers track and optimize their tax deductions"

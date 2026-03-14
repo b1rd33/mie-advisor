@@ -61,7 +61,7 @@ For each advisor (in order 01-08), read their persona + knowledge files, then pr
 
 **Rules:**
 - Reference specific named frameworks from the knowledge file (not "competitive analysis" — say "Porter's Five Forces" or "Three-Leg Test")
-- Use web search (2-5 queries per advisor) for real market data, competitors, pricing
+- Use web search for real market data, competitors, pricing — no limit on queries
 - Later advisors MUST engage with earlier ones (agree + add nuance, OR disagree citing a framework)
 - Never fabricate citations, URLs, or numbers
 
@@ -145,6 +145,18 @@ Then synthesize:
 ```
 
 Keep total output under 1000 words. Be harsh, not encouraging.
+
+---
+
+## Web Research
+
+Use web search aggressively for real market data, competitors, and pricing. No limits on number of searches.
+
+- **Prefer lightweight tools first** (WebSearch, WebFetch) — they're fast and cheap on tokens
+- **Use browser automation** ([agent-browser](https://github.com/vercel-labs/agent-browser), Playwright) only when pages need JavaScript rendering (competitor dashboards, Crunchbase, pricing pages with interactions)
+- **If using Claude Code's built-in internet**, be aware it consumes tokens — batch queries efficiently
+- **If no search tools are available**, state the limitation explicitly and reduce confidence in market claims
+- **Never fabricate search results** — if you can't find data, say so
 
 ---
 
